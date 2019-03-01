@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using vector = UnityEngine.Vector2;
 
-public class RedBird : MonoBehaviour {
+public class RedBird2 : MonoBehaviour {
 
 	Rigidbody2D bird;
 	Vector2 up = vector.up * 20;
@@ -17,12 +17,18 @@ public class RedBird : MonoBehaviour {
 	
 
 	void Update () {
-
+		
 		if (OnKey("up")){
 			bird.AddForce(up);
 		}
 		if (OnKey("down")){
-			
+			bird.AddForce(down);
+		}
+		if (OnKey("left")){
+			bird.AddForce(left);
+		}
+		if (OnKey("right")){
+			bird.AddForce(right);
 		}
 	}
 
